@@ -1,4 +1,4 @@
-name: Deploy
+name: Main CI
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  release-please:
     runs-on: ubuntu-latest
 
     strategy:
