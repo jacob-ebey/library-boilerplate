@@ -22,12 +22,6 @@ jobs:
           release-type: node
           package-name: "@jacob-ebey/library-boilerplate"
 
-      - uses: GoogleCloudPlatform/release-please-action@v2
-        with:
-          release-type: node
-          package-name: "@jacob-ebey/library-boilerplate"
-          default-branch: beta
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
