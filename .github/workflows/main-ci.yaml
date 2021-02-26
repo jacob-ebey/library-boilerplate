@@ -22,18 +22,8 @@ jobs:
           release-type: node
           package-name: "@jacob-ebey/library-boilerplate"
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install Dependencies
-        if: ${{ steps.release.outputs.release_created }}
-        run: yarn
-
       - uses: JS-DevTools/npm-publish@v1
         if: ${{ steps.release.outputs.release_created }}
         with:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
-          dry-run: true
