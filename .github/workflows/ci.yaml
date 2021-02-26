@@ -35,5 +35,4 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         with:
           registry: https://npm.pkg.github.com
-          token: ${{ secrets.NPM_TOKEN }}
-          dry-run: true
+          token: ${{ secrets.GITHUB_TOKEN }}
