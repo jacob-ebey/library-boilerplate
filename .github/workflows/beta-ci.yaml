@@ -1,9 +1,6 @@
 name: Beta CI
 
-on:
-  push:
-    branches:
-      - beta
+on: push
 
 jobs:
   release-please:
@@ -21,3 +18,4 @@ jobs:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
+          tag: prerelease
