@@ -21,12 +21,22 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm versioning
-        id: npmVersioning
-        uses: pengyanb/npm-versioning-action@v1
+      - uses: Bruce17/ghaction-package-latest-version@v1
+        id: npmVersion
+        with:
+          language: node
+          package: "@jacob-ebey/library-boilerplate"
+          registry: https://npm.pkg.github.com/%s
+
+      - name: Bump release version
+        id: bump_version
+        uses: christian-draeger/increment-semantic-version@1.0.2
+        with:
+          current-version: ${{ steps.npmVersion.outputs.latestVersion }}
+          version-fragment: 'beta'
 
       - name: dummy versioning usage
-        run: echo "Generated version is \${{ steps.npmVersioning.outputs.version}}"
+        run: echo "Generated version is \${{ steps.bump_version.outputs.next-version }}"
 
       # - name: Install Dependencies
       #   if: ${{ steps.release.outputs.release_created }}
