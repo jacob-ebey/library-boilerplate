@@ -1,9 +1,9 @@
-name: Beta CI
+name: Main CI
 
 on:
   push:
     branches:
-      - beta
+      - main
 
 jobs:
   release-please:
@@ -16,35 +16,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          release-type: node
+          package-name: "@jacob-ebey/library-boilerplate"
+          default-branch: beta
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: Bruce17/ghaction-package-latest-version@v1
-        id: npmVersion
+      - name: Install Dependencies
+        if: ${{ steps.release.outputs.release_created }}
+        run: yarn
+
+      - uses: JS-DevTools/npm-publish@v1
+        if: ${{ steps.release.outputs.release_created }}
         with:
-          language: node
-          package: "@jacob-ebey/library-boilerplate"
-          registry: https://npm.pkg.github.com/%s
-
-      - name: Bump release version
-        id: bump_version
-        uses: christian-draeger/increment-semantic-version@1.0.2
-        with:
-          current-version: ${{ steps.npmVersion.outputs.latestVersion }}
-          version-fragment: 'beta'
-
-      - name: dummy versioning usage
-        run: echo "Generated version is \${{ steps.bump_version.outputs.next-version }}"
-
-      # - name: Install Dependencies
-      #   if: ${{ steps.release.outputs.release_created }}
-      #   run: yarn
-
-      # - uses: JS-DevTools/npm-publish@v1
-      #   if: ${{ steps.release.outputs.release_created }}
-      #   with:
-      #     registry: https://npm.pkg.github.com
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     dry-run: true
+          registry: https://npm.pkg.github.com
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dry-run: true
