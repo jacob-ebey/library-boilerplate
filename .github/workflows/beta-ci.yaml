@@ -1,0 +1,23 @@
+name: Beta CI
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          registry: https://npm.pkg.github.com
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dry-run: true
