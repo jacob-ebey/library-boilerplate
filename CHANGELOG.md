@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.0.0...v1.0.1) (2021-02-26)
+
+
+### Bug Fixes
+
+* added github token to ci pipeline ([a438267](https://www.github.com/jacob-ebey/library-boilerplate/commit/a4382676b52d6894d933bc072ebfbb4e3522d2a7))
+
 ## 1.0.0 (2021-02-26)
 
 
