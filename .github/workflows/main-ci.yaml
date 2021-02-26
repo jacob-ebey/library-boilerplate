@@ -23,7 +23,7 @@ jobs:
           package-name: "@jacob-ebey/library-boilerplate"
 
       - uses: JS-DevTools/npm-publish@v1
-        if: ${{ steps.release.outputs.release_created }}
         with:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
+          check-version: true
