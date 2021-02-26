@@ -16,24 +16,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: GoogleCloudPlatform/release-please-action@v2
-        id: release
-        with:
-          release-type: node
-          package-name: "@jacob-ebey/library-boilerplate"
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install Dependencies
-        if: ${{ steps.release.outputs.release_created }}
-        run: yarn
+      - name: npm versioning
+        id: npmVersioning
+        uses: pengyanb/npm-versioning-action@v1
 
-      - uses: JS-DevTools/npm-publish@v1
-        if: ${{ steps.release.outputs.release_created }}
-        with:
-          registry: https://npm.pkg.github.com
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dry-run: true
+      - name: dummy versioning usage
+        run: echo "Generated version is \${{ steps.npmVersioning.outputs.version}}"
+
+      # - name: Install Dependencies
+      #   if: ${{ steps.release.outputs.release_created }}
+      #   run: yarn
+
+      # - uses: JS-DevTools/npm-publish@v1
+      #   if: ${{ steps.release.outputs.release_created }}
+      #   with:
+      #     registry: https://npm.pkg.github.com
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     dry-run: true
