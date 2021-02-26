@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.2.0...v1.3.0) (2021-02-26)
+
+
+### Features
+
+* made even louder ([360310a](https://www.github.com/jacob-ebey/library-boilerplate/commit/360310a3c55f5e4765b5a8523521b2396bf8e57e))
+
+
+### Bug Fixes
+
+* **ci:** dont' run beta ci on main ([e5ba883](https://www.github.com/jacob-ebey/library-boilerplate/commit/e5ba883da0c03a616a57de38017a8e38e3ddf60d))
+* updated ci ([87b0d1f](https://www.github.com/jacob-ebey/library-boilerplate/commit/87b0d1faf3c1a4e2fa0a02a18f0b05d3c1af9315))
+
 ## [1.2.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.1.1...v1.2.0) (2021-02-26)
 
 
