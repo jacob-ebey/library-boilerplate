@@ -1,9 +1,9 @@
-name: Main CI
+name: Beta CI
 
 on:
   push:
     branches:
-      - main
+      - beta
 
 jobs:
   release-please:
