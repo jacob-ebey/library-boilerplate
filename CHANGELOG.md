@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.0.1...v1.1.0) (2021-02-26)
+
+
+### Features
+
+* added beta ci ([b53ccb0](https://www.github.com/jacob-ebey/library-boilerplate/commit/b53ccb0de90569fa863a4e972d20c25df8595991))
+* attempting to use npm-versioning-action for beta ([a702466](https://www.github.com/jacob-ebey/library-boilerplate/commit/a702466ea5c952b28df170dc372bd4b2aae638d0))
+* **ci:** updated ci ([d670ab5](https://www.github.com/jacob-ebey/library-boilerplate/commit/d670ab5f2e99f99a42382cbf5e3c341474048679))
+* **ci:** updated ci ([c721ecc](https://www.github.com/jacob-ebey/library-boilerplate/commit/c721ecc3792820c1d0dbc1f3ca43496690b01c11))
+* default name to "World" ([0dac920](https://www.github.com/jacob-ebey/library-boilerplate/commit/0dac920660f4d1dc2608ceff204995697ab9d9b4))
+* generating beta version based on last published version ([bd167aa](https://www.github.com/jacob-ebey/library-boilerplate/commit/bd167aadd2c1b39acae94ed7482cd452ba7cac6a))
+* revert back to release-please ([c7c0d6f](https://www.github.com/jacob-ebey/library-boilerplate/commit/c7c0d6fb81d7d0226c6f7a9773e7fcc0d65e706e))
+
+
+### Bug Fixes
+
+* fixed main ci ([f2a21cd](https://www.github.com/jacob-ebey/library-boilerplate/commit/f2a21cde1ce4e60fa27c64f455bced4e4ffc17fb))
+* missed branch name for ci ([dc5e588](https://www.github.com/jacob-ebey/library-boilerplate/commit/dc5e5887672a5c88a3adbf794e1af95cb5bf49c5))
+* updated ci ([d7eef46](https://www.github.com/jacob-ebey/library-boilerplate/commit/d7eef46ab1fa1498d0ef56a70e5c818e2b40b15f))
+* updating ci ([844a959](https://www.github.com/jacob-ebey/library-boilerplate/commit/844a95966ac2aa5030a0a16636a136380f0d51f3))
+
 ### [1.0.1](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.0.0...v1.0.1) (2021-02-26)
 
 
