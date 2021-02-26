@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.1.0...v1.1.1) (2021-02-26)
+
+
+### Bug Fixes
+
+* updated beta ci ([524507c](https://www.github.com/jacob-ebey/library-boilerplate/commit/524507cf0463c38183fef59fa7a5818948067a4d))
+* updated beta ci ([e417641](https://www.github.com/jacob-ebey/library-boilerplate/commit/e417641db6729c6efcef5dda900b84d2e9de1b44))
+* updated ci ([8be7650](https://www.github.com/jacob-ebey/library-boilerplate/commit/8be765097da1ddbce5aa9d80f25044ca373cdd11))
+
 ## [1.1.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.0.1...v1.1.0) (2021-02-26)
 
 
