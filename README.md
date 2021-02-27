@@ -19,9 +19,9 @@ Creating a PR will run lint, and test CI, along with attempting to publish a pre
 
 - Your PR updates the package.json version
 - Version is not already published
-- Your updated version matches `{SEMVER}-pr.{PR_NUMBER}.{VERSION}`
+- Your updated version matches `{SEMVER}-PR.{PR_NUMBER}--{VERSION}`
 
-For example, `1.2.3-pr.12.0` would represent the first prerelease version of PR 12 that would attempt to be published by the CI pipeline. If the version already exists, publish will be skipped until the prerelease version has been updated again.
+For example, `1.2.3-PR.12--0` would represent the first prerelease version of PR 12 that would attempt to be published by the CI pipeline. If the version already exists, publish will be skipped until the prerelease version has been updated again to `1.2.3-PR.12--1`.
 
 ### Production Release
 
