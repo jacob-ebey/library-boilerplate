@@ -1,12 +1,9 @@
 name: Beta CI
 
-on:
-  push:
-    branches-ignore:
-      - "main"
+on: pull_request
 
 jobs:
-  release-please:
+  release-pr:
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,9 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: get-npm-version
+        id: version
+        uses: martinbeentjes/npm-get-version-action@master
+
       - uses: JS-DevTools/npm-publish@v1
         with:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
-          tag: prerelease
+          tag: ${{ steps.version.outputs.current-version }}

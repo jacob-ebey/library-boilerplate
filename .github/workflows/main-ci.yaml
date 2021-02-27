@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  release-please:
+  create-release-pr:
     runs-on: ubuntu-latest
 
     strategy:
@@ -29,10 +29,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
 
+      - name: get-npm-version
+        if: ${{ !steps.release.outputs.release_created }}
+        id: version
+        uses: martinbeentjes/npm-get-version-action@master
+
       - uses: JS-DevTools/npm-publish@v1
         if: ${{ !steps.release.outputs.release_created }}
         with:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
-          tag: prerelease
+          tag: ${{ steps.version.outputs.current-version }}
