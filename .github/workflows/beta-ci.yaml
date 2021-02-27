@@ -13,15 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: codaline-io/dev-version@0.1.2
+      - name: get-npm-version
         id: version
-        with:
-          branch: ${{ github.ref }}
-          filePath: ./package.json
+        uses: martinbeentjes/npm-get-version-action@master
 
       - uses: JS-DevTools/npm-publish@v1
         with:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
-          tag: ${{ steps.version.outputs.version }}
+          tag: ${{ steps.version.outputs.current-version }}
