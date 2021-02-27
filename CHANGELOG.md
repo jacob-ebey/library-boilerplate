@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.3.0...v1.4.0) (2021-02-27)
+
+
+### Features
+
+* added typescript and jest ([640c91e](https://www.github.com/jacob-ebey/library-boilerplate/commit/640c91e4e000ea5e60b6a2ded22ba0c642a4bcd0))
+* added typescript and jest ([640c91e](https://www.github.com/jacob-ebey/library-boilerplate/commit/640c91e4e000ea5e60b6a2ded22ba0c642a4bcd0))
+
 ## [1.3.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.2.0...v1.3.0) (2021-02-26)
 
 ### Features
