@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  create-release-pr:
+  release-please:
     runs-on: ubuntu-latest
 
     strategy:
