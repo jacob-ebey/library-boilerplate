@@ -13,9 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: codaline-io/dev-version@0.1.2
+        id: version
+        with:
+          branch: ${{ github.ref }}
+          filePath: ./package.json
+
       - uses: JS-DevTools/npm-publish@v1
         with:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
-          tag: prerelease
+          tag: ${{ steps.version.outputs.version }}
