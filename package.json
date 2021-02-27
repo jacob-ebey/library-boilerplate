@@ -22,7 +22,7 @@
     "build": "run-p build:*",
     "build:bundles": "node esbuild",
     "build:types": "tsc --emitDeclarationOnly",
-    "format": "prettier --write .",
+    "format": "prettier --write ./src",
     "test": "jest"
   },
   "devDependencies": {
