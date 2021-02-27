@@ -8,7 +8,5 @@
     "forceConsistentCasingInFileNames": true,
     "declarationDir": "./lib/types"
   },
-  "include": [
-    "./src"
-  ]
+  "include": ["./src"]
 }

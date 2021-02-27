@@ -22,6 +22,7 @@
     "build": "run-p build:*",
     "build:bundles": "node esbuild",
     "build:types": "tsc --emitDeclarationOnly",
+    "format": "prettier --write .",
     "test": "jest"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "glob": "^7.1.6",
     "jest": "^26.6.3",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
     "typescript": "^4.2.2"
   },
   "jest": {
