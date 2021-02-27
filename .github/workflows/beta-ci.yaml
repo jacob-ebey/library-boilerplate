@@ -3,7 +3,7 @@ name: Beta CI
 on: pull_request
 
 jobs:
-  release-please:
+  release-pr:
     runs-on: ubuntu-latest
 
     strategy:
