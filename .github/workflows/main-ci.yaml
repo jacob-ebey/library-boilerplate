@@ -46,9 +46,16 @@ jobs:
         uses: martinbeentjes/npm-get-version-action@master
 
       - uses: JS-DevTools/npm-publish@v1
-        if: ${{ !steps.release.outputs.release_created }}
+        if: ${{ contains(steps.version.outputs.current-version, '-beta.') }}
         with:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
-          tag: ${{ steps.version.outputs.current-version }}
+          tag: beta
+
+      - uses: JS-DevTools/npm-publish@v1
+        if: ${{ !contains(steps.version.outputs.current-version, '-') }}
+        with:
+          registry: https://npm.pkg.github.com
+          token: ${{ secrets.GITHUB_TOKEN }}
+          check-version: true

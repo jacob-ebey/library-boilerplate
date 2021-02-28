@@ -1,6 +1,6 @@
 {
   "name": "@jacob-ebey/library-boilerplate",
-  "version": "1.4.0",
+  "version": "1.4.0-pr.21-0",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -22,6 +22,7 @@
     "build": "run-p build:*",
     "build:bundles": "node esbuild",
     "build:types": "tsc --emitDeclarationOnly",
+    "dev": "jest --watch",
     "format": "prettier --write ./src",
     "test": "jest"
   },
@@ -38,6 +39,9 @@
     "typescript": "^4.2.2"
   },
   "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ],
     "transform": {
       "^.+\\.tsx?$": "esbuild-jest"
     }
