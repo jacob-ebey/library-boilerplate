@@ -34,4 +34,4 @@ jobs:
           registry: https://npm.pkg.github.com
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: true
-          tag: ${{ steps.version.outputs.current-version }}
+          tag: beta
