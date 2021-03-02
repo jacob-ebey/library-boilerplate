@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.4.0...v1.5.0) (2021-03-02)
+
+
+### Features
+
+* made things louder ([#22](https://www.github.com/jacob-ebey/library-boilerplate/issues/22)) ([a0a7e24](https://www.github.com/jacob-ebey/library-boilerplate/commit/a0a7e24e5efc3f24db15fa01e0f1e74715a2c695))
+
 ## [1.4.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.3.0...v1.4.0) (2021-02-27)
 
 ### Features
