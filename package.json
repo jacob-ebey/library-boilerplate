@@ -24,7 +24,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "dev": "jest --watch",
     "format": "prettier --write ./src",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
