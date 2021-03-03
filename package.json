@@ -16,7 +16,7 @@
   "main": "./lib/cjs/index.cjs",
   "exports": {
     "import": "./lib/esm/index.js",
-    "require": "./lib/cjs/index.js"
+    "require": "./lib/cjs/index.cjs"
   },
   "scripts": {
     "build": "run-p build:*",
