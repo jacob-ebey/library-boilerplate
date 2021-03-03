@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.5.1](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.5.0...v1.5.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* fixed require export reference in package.json ([e39605f](https://www.github.com/jacob-ebey/library-boilerplate/commit/e39605f9a2059fcd6dbe6eedc89274c4e6c71ecc))
+
 ## [1.5.0](https://www.github.com/jacob-ebey/library-boilerplate/compare/v1.4.0...v1.5.0) (2021-03-02)
 
 
