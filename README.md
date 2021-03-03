@@ -33,4 +33,4 @@ Once you are ready to release, just merge this auto-generated PR back to `main` 
 
 ### Beta Release
 
-Simply bump the version on main to match `{SEMVER}-beta.{VERSION}` and it will be automatically be tagged as a beta and deployed.
+Simply bump the version on main to match `{SEMVER}-beta.{VERSION}` and it will automatically be tagged as a beta and deployed.
